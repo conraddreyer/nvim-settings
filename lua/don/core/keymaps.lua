@@ -20,6 +20,13 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
+-- move lines up/down
+-- THESE WORK FOR MAC, because alt+j is º and alt+k is ∆ as a symbol. Normally, one should use <M-j> and <M-k> instead.
+keymap.set("n", "º", ":m+1<CR>") -- move line down
+keymap.set("n", "∆", ":m-2<CR>") -- move line up
+keymap.set("n", "<M-j>", ":m+1<CR>") -- move line down
+keymap.set("n", "<M-k>", ":m-2<CR>") -- move line up
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
