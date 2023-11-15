@@ -58,6 +58,16 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- harpoon
+keymap.set("n", "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<cr>") -- add current file to harpoon bookmarks
+keymap.set("n", "<leader>hm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>") -- toggle harpoon quick menu
+keymap.set("n", "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>") -- navigate to next harpoon bookmark
+keymap.set("n", "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>") -- navigate to previous harpoon bookmark
+keymap.set("n", "<leader>hh", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>") -- navigate to first harpoon bookmark
+keymap.set("n", "<leader>hj", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>") -- navigate to second harpoon bookmark
+keymap.set("n", "<leader>hk", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>") -- navigate to second harpoon bookmark
+keymap.set("n", "<leader>hl", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>") -- navigate to second harpoon bookmark
+
 -- telescope git commands (not on youtube nvim video)
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]

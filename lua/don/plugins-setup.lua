@@ -32,6 +32,7 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	use("nvim-lua/popup.nvim") -- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
@@ -60,9 +61,17 @@ return packer.startup(function(use)
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
 
+	--indent lines:w
+
+	use("lukas-reineke/indent-blankline.nvim") -- indent lines
+
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	use("nvim-telescope/telescope-media-files.nvim") -- fuzzy finder for media files
+
+	--  harpoon
+	use("ThePrimeagen/harpoon")
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
